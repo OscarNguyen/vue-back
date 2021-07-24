@@ -1,0 +1,47 @@
+POST http://localhost:8080/api/page/create HTTP/1.1
+Content-Type: application/json
+
+{
+  "type":"about-us",
+  "content":"<h1>ahihidongox</h1>"
+}
+###
+GET http://localhost:8080/api/page/ HTTP/1.1
+Content-Type: application/json
+
+{"type":"homepage"}
+
+###
+PUT http://localhost:8080/api/page/update HTTP/1.1
+Content-Type: application/json
+
+{
+  "type":"about-us",
+  "content":"<h1>cc</h1>"
+}
+
+### News
+POST http://localhost:8080/api/news/create HTTP/1.1
+Content-Type: application/json
+
+{
+  "title":"Chuyen tinh Lan va Tu",
+  "body":"<h1>cai dudama</h1>"
+}
+###
+GET http://localhost:8080/api/news/ HTTP/1.1
+Content-Type: application/json
+
+### GET ONE
+GET http://localhost:8080/api/news/60f5eadc2b42e915a4a18bfe HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://localhost:8080/api/news/update HTTP/1.1
+Content-Type: application/json
+
+{
+  "id":"60f5eadc2b42e915a4a18bfe",
+  "title":"Chuyen tinh Lan va CC",
+  "body":"<h1>cai dudama</h1>"
+}
